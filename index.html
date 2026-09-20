@@ -4,17 +4,371 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Classement des meilleures IPA — notes, IBU, EBC | VineBast</title>
     <meta
       name="description"
-      content="Le classement des 10 meilleures bières IPA, noté et commenté. Double IPA, NEIPA, West Coast… À vos pintes !"
+      content="Le classement des meilleures IPA, notées sur 5 : Guinguette, La Titi Parisien, Poule Mouillée, West Coast, Goose IPA, L.B.F., Hazy Jane, Ninkasi. Notes, ABV, IBU, EBC et liens vers les brasseries."
     />
-    <title>Classement des meilleures IPA 🍺</title>
+    <meta name="author" content="VineBast" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0c0a09" />
+    <link rel="canonical" href="https://ipa-ranking.vercel.app/" />
+    <!-- Open Graph (réseaux sociaux) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:site_name" content="Classement des meilleures IPA" />
+    <meta
+      property="og:title"
+      content="Le classement des meilleures (et pires) IPA, notées sur 5"
+    />
+    <meta
+      property="og:description"
+      content="8 IPA notées à la gorgée : Guinguette, La Titi Parisien, Poule Mouillée, Hazy Jane… Notes sur 5, ABV, IBU, EBC et liens vers les brasseries."
+    />
+    <meta property="og:url" content="https://ipa-ranking.vercel.app/" />
+    <meta
+      property="og:image"
+      content="https://ipa-ranking.vercel.app/bapbap_ginguette.png"
+    />
+    <meta
+      property="og:image:alt"
+      content="BAPBAP Guinguette, l'IPA n°1 du classement"
+    />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta
+      name="twitter:title"
+      content="Le classement des meilleures (et pires) IPA"
+    />
+    <meta
+      name="twitter:description"
+      content="8 IPA notées sur 5 : Guinguette, La Titi Parisien, Poule Mouillée, Hazy Jane… ABV, IBU, EBC et liens vers les brasseries."
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <!-- Données structurées (SEO & GEO) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Classement des meilleures IPA",
+  "url": "https://ipa-ranking.vercel.app/",
+  "inLanguage": "fr-FR",
+  "description": "Classement personnel des meilleures IPA, notées sur 5."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Classement des meilleures IPA",
+  "description": "Sélection d'IPA françaises et internationales notées sur 5 : Guinguette (BAPBAP), La Titi Parisien, Poule Mouillée, West Coast (Gallia), Goose IPA, L.B.F. Session IPA, Hazy Jane (BrewDog), NEIPA (Ninkasi).",
+  "itemListOrder": "https://schema.org/ItemListOrderAscending",
+  "numberOfItems": 8,
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "Product",
+        "name": "Guinguette",
+        "brand": {
+          "@type": "Brand",
+          "name": "BAPBAP"
+        },
+        "description": "Contrepoint de la West Coast Vertigo : IPA blonde claire à la base maltée sèche et désaltérante, houblon Mosaic en vedette. Médaillée d'argent aux World Beer Awards 2025.",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "ABV",
+            "value": 5.8
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "IBU",
+            "value": 67.5
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "EBC",
+            "value": 7.2
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 5,
+          "bestRating": 5,
+          "worstRating": 1,
+          "ratingCount": 1
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "Product",
+        "name": "La Titi Parisien",
+        "brand": {
+          "@type": "Brand",
+          "name": "Brasserie La Parisienne"
+        },
+        "description": "L'IPA de référence de la brasserie parisienne : propre et franche, 5,5 % vol. et 35 IBU. Amertume bien présente, équilibre malts-houblon soigné.",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "ABV",
+            "value": 5.5
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "IBU",
+            "value": 35
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "EBC",
+            "value": 14
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 4.25,
+          "bestRating": 5,
+          "worstRating": 1,
+          "ratingCount": 1
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "Product",
+        "name": "Poule Mouillée",
+        "brand": {
+          "@type": "Brand",
+          "name": "Brasserie Tandem"
+        },
+        "description": "Une IPA blonde aux allures de West Coast : pamplemousse, citron, céréales et brioche, avec une amertume bien présente. Brassée dans les Hauts-de-France.",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "ABV",
+            "value": 6.5
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "IBU",
+            "value": 30
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "EBC",
+            "value": 10
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 3.5,
+          "bestRating": 5,
+          "worstRating": 1,
+          "ratingCount": 1
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+        "@type": "Product",
+        "name": "West Coast IPA",
+        "brand": {
+          "@type": "Brand",
+          "name": "Gallia"
+        },
+        "description": "La West Coast IPA de la brasserie emblématique de la capitale. 6 % vol., 53 IBU : profil net et désaltérant, amertume franche, fruits confits et résineux.",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "ABV",
+            "value": 6
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "IBU",
+            "value": 53
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "EBC",
+            "value": 18
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 3,
+          "bestRating": 5,
+          "worstRating": 1,
+          "ratingCount": 1
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "item": {
+        "@type": "Product",
+        "name": "Goose IPA",
+        "brand": {
+          "@type": "Brand",
+          "name": "Goose Island Beer Co."
+        },
+        "description": "La classique de Chicago : ample, sucrée-vive, amertume riche et malt doux.",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "ABV",
+            "value": 5.9
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "IBU",
+            "value": 55
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "EBC",
+            "value": 16
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 2.6,
+          "bestRating": 5,
+          "worstRating": 1,
+          "ratingCount": 1
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "item": {
+        "@type": "Product",
+        "name": "L.B.F. Session IPA",
+        "brand": {
+          "@type": "Brand",
+          "name": "La Brasserie Fondamentale"
+        },
+        "description": "La Session IPA de la brasserie de Saint-Ouen : légère (5 % vol.), légèrement ambrée, franchement amère et fruitée malgré sa faible teneur en alcool. Le format de tous les jours.",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "ABV",
+            "value": 5
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "IBU",
+            "value": 45
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "EBC",
+            "value": 25
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 2.25,
+          "bestRating": 5,
+          "worstRating": 1,
+          "ratingCount": 1
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "item": {
+        "@type": "Product",
+        "name": "Hazy Jane",
+        "brand": {
+          "@type": "Brand",
+          "name": "BrewDog"
+        },
+        "description": "La New England IPA de BrewDog (version 5 %), brassée avec avoine, blé et seigle. Ultra-fruitée, peu amère (25 IBU), douce et juteuse à souhait.",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "ABV",
+            "value": 5
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "IBU",
+            "value": 25
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "EBC",
+            "value": 14
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 2.25,
+          "bestRating": 5,
+          "worstRating": 1,
+          "ratingCount": 1
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 8,
+      "item": {
+        "@type": "Product",
+        "name": "New England IPA",
+        "brand": {
+          "@type": "Brand",
+          "name": "Ninkasi"
+        },
+        "description": "La NEIPA de la brasserie lyonnaise, brassée avec du houblon Elixir 100 % français. Texture ultra-veloutée (céréales non maltées), fruits tropicaux et pêche, très peu d'amertume.",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "ABV",
+            "value": 6
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "IBU",
+            "value": 30
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "EBC",
+            "value": 10
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 1.5,
+          "bestRating": 5,
+          "worstRating": 1,
+          "ratingCount": 1
+        }
+      }
+    }
+  ]
+}
+</script>
   </head>
   <body>
     <div id="root"></div>

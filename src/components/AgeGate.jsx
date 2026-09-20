@@ -60,8 +60,7 @@ export default function AgeGate({ onConfirm }) {
         )}
 
         <p className="mt-6 text-xs text-stone-600">
-          🔒 Ta validation est enregistrée uniquement sur cet appareil
-          (localStorage) — aucune donnée n'est transmise.
+          🔒 Ta validation est enregistrée uniquement sur cet appareil — aucune donnée n'est transmise.
         </p>
       </div>
     </div>

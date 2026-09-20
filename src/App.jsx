@@ -1,8 +1,31 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { beers } from "./data/beers";
 import RankCard from "./components/RankCard";
 import RankCardModal from "./components/RankCardModal";
 import AgeGate, { OF_AGE_KEY } from "./components/AgeGate";
+
+const FAQS = [
+  {
+    q: "Qu'est-ce qu'une IPA ?",
+    a: "IPA (India Pale Ale) : un style de bière très houblonné, né en Angleterre puis réinventé aux États-Unis. Il se caractérise par une amertume franche et des arômes d'agrumes, de fruits tropicaux ou de résine.",
+  },
+  {
+    q: "Quelle différence entre IBU et EBC ?",
+    a: "L'IBU (International Bitterness Units) mesure l'amertume : plus c'est élevé, plus la bière est amère. L'EBC (European Brewery Convention) mesure la couleur : plus c'est élevé, plus la robe est foncée.",
+  },
+  {
+    q: "Qu'est-ce qu'une NEIPA ?",
+    a: "La New England IPA est une IPA trouble et juteuse, brassée avec de l'avoine et du blé. Elle mise sur les arômes fruités (ananas, mangue, agrumes) et une amertume très douce.",
+  },
+  {
+    q: "Qu'est-ce qu'une West Coast IPA ?",
+    a: "La West Coast IPA est blonde, limpide et sèche, avec une amertume marquée et des arômes d'agrumes et de résineux. C'est le profil historique de l'IPA américaine.",
+  },
+  {
+    q: "Comment les bières sont-elles notées ?",
+    a: "Chaque bière est notée sur 5 après dégustation, avec un commentaire sur les arômes, l'amertume et l'équilibre général. Le classement est purement subjectif.",
+  },
+];
 
 function App() {
   const [query, setQuery] = useState("");
@@ -15,6 +38,13 @@ function App() {
       return false;
     }
   });
+
+  // Titre d'onglet dynamique (SEO + partage)
+  useEffect(() => {
+    document.title = selectedBeer
+      ? `${selectedBeer.name} — notée ${selectedBeer.note}/5 · Classement des meilleures IPA`
+      : "Classement des meilleures IPA — notes, IBU, EBC · VineBast";
+  }, [selectedBeer]);
 
   const styles = useMemo(
     () => ["Toutes", ...new Set(beers.map((b) => b.style))],
@@ -163,6 +193,37 @@ function App() {
           </p>
           <p className="pt-1 text-stone-600">~ = valeur approximative.</p>
         </div>
+
+        {/* FAQ (GEO : contenus questions/réponses bien structurés) */}
+        <section
+          className="mx-auto mt-14 max-w-2xl"
+          aria-label="Questions fréquentes"
+        >
+          <h2 className="text-center font-display text-2xl font-bold tracking-tight text-stone-100">
+            Questions fréquentes
+          </h2>
+          <div className="mt-6 space-y-3">
+            {FAQS.map(({ q, a }) => (
+              <details
+                key={q}
+                className="group rounded-2xl border border-white/10 bg-stone-900/50 p-4 transition open:border-emerald-400/30"
+              >
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-3 text-sm font-semibold text-stone-200 [&::-webkit-details-marker]:hidden">
+                  {q}
+                  <span
+                    aria-hidden="true"
+                    className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-emerald-400/10 text-emerald-300 transition group-open:rotate-45"
+                  >
+                    +
+                  </span>
+                </summary>
+                <p className="mt-3 text-sm leading-relaxed text-stone-400">
+                  {a}
+                </p>
+              </details>
+            ))}
+          </div>
+        </section>
       </div>
 
       {/* Footer */}
