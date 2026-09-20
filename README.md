@@ -12,6 +12,8 @@ Classement des 10 meilleures bières IPA — React + Vite + Tailwind CSS.
 - IBU et EBC approximatifs signalés par un **`*`** avec légende en bas de page
 - **Modale « fiche bière »** au clic sur une card : toutes les infos en plus grand, plus les liens
   vers le site de la bière et de la brasserie (`beerUrl` / `breweryUrl` à renseigner)
+- **Porte d'entrée 18+** : validation d'âge en première page, mémorisée en `localStorage`
+  (clé `ipa-ranking-of-age`) pour ne pas la revoir à chaque visite
 - Dégradés sombres, halos verts, polices Bricolage Grotesque + Inter
 
 ## 🚀 Démarrage

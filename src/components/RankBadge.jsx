@@ -1,18 +1,35 @@
 const PODYUM_BADGES = {
   1: {
     badge:
+      "from-lime-300 via-green-500 to-green-700 text-stone-950 border-lime-200/60 shadow-green-500/30",
+    ring: "ring-green-400/40",
+  },
+  2: {
+
+    badge:
       "from-emerald-200 via-emerald-400 to-emerald-600 text-stone-950 border-emerald-100/70 shadow-emerald-500/30",
     ring: "ring-emerald-400/40",
   },
-  2: {
+  3: {
     badge:
       "from-teal-100 via-teal-300 to-teal-500 text-stone-900 border-teal-200/70 shadow-teal-400/30",
     ring: "ring-teal-300/40",
   },
-  3: {
+  // Dernières places : dégradé vert → rouge, intensité croissante (tons légers)
+  6: {
     badge:
-      "from-lime-300 via-green-500 to-green-700 text-stone-950 border-lime-200/60 shadow-green-500/30",
-    ring: "ring-green-400/40",
+      "from-lime-200 via-lime-300 to-orange-400 text-stone-950 border-orange-300/40 shadow-orange-300/20",
+    ring: "ring-orange-300/30",
+  },
+  7: {
+    badge:
+      "from-orange-200 via-orange-400 to-red-400 text-stone-950 border-orange-300/50 shadow-orange-400/25",
+    ring: "ring-orange-400/40",
+  },
+  8: {
+    badge:
+      "from-red-300 via-red-400 to-red-500 text-stone-950 border-red-300/50 shadow-red-400/30",
+    ring: "ring-red-400/40",
   },
 };
 
