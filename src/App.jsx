@@ -2,7 +2,8 @@ import { useEffect, useMemo, useState } from "react";
 import { beers } from "./data/beers";
 import RankCard from "./components/RankCard";
 import RankCardModal from "./components/RankCardModal";
-import AgeGate, { OF_AGE_KEY } from "./components/AgeGate";
+// 🔒 Porte 18+ désactivée (contenu éditorial non commercial : pas d'obligation légale).
+// Composant conservé dans src/components/AgeGate.jsx — réactivation : voir plus bas.
 
 const FAQS = [
   {
@@ -31,13 +32,6 @@ function App() {
   const [query, setQuery] = useState("");
   const [selectedStyle, setSelectedStyle] = useState("Toutes");
   const [selectedBeer, setSelectedBeer] = useState(null);
-  const [ofAge, setOfAge] = useState(() => {
-    try {
-      return localStorage.getItem(OF_AGE_KEY) === "1";
-    } catch {
-      return false;
-    }
-  });
 
   // Titre d'onglet dynamique (SEO + partage)
   useEffect(() => {
@@ -66,10 +60,20 @@ function App() {
       .map((beer, index) => ({ ...beer, rank: index + 1 }));
   }, [query, selectedStyle]);
 
-  // Porte d'entrée : validation 18+ (mémorisée en localStorage)
-  if (!ofAge) {
-    return <AgeGate onConfirm={() => setOfAge(true)} />;
-  }
+  // 🔒 Réactivation de la porte 18+ (si besoin) :
+  //   1. Décommente l'import du composant en haut du fichier.
+  //   2. Ajoute cet état :
+  //      const [ofAge, setOfAge] = useState(() => {
+  //        try {
+  //          return localStorage.getItem(OF_AGE_KEY) === "1";
+  //        } catch {
+  //          return false;
+  //        }
+  //      });
+  //   3. Ajoute ce retour anticipé juste après les hooks :
+  //      if (!ofAge) {
+  //        return <AgeGate onConfirm={() => setOfAge(true)} />;
+  //      }
 
   return (
     <div className="relative min-h-screen overflow-hidden">
